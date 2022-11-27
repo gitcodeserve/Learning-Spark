@@ -17,10 +17,10 @@ public class FlatMapExample {
     public static void main(String[] args) {
         Logger.getLogger("org.apache").setLevel(Level.ERROR);
         List<String> inputData = new ArrayList<>();
-        inputData.add("Name: Shantanu Sahay");
+        inputData.add("Name: Alex Wong");
         inputData.add("Age: 40");
         inputData.add("Sex: Male");
-        inputData.add("Email: shantanu.sahay@gmail..com shantanu.sahay@google.com");
+        inputData.add("Email: alex.wong@gmail..com alex.wong@google.com");
         // configure spark
         SparkConf sparkConf = new SparkConf().setAppName("FlatMap App")
                 .setMaster("local[*]");
