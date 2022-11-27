@@ -1,0 +1,10 @@
+INFO: 11-16-20 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener - contextInitialized() Jun 29, 2008 11-22-43 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+Jun 29, 2008 1:26:34 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener - contextDestroyed()Jun 29, 2008 1-26-34 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener-  contextDestroyed()
+WARN: Test 123
+WARN: XYZ
+WARN: 1
+WARN: 2
