@@ -1,4 +1,4 @@
-package com.virtualpairprogrammers;
+package com.learning.spark;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -10,10 +10,9 @@ import org.apache.spark.api.java.JavaSparkContext;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class SqrtRootRDDExample {
 
     public static void main(String[] args) {
-
         Logger.getLogger("org.apache").setLevel(Level.ERROR);
 
         List<Double> doubleCode = new ArrayList<Double>();
@@ -26,13 +25,11 @@ public class Main {
         sparkConf.setAppName("Start spark").setMaster("local[*]");
         JavaSparkContext context = new JavaSparkContext(sparkConf);
 
-        JavaRDD<Double> myRdd = context.parallelize(doubleCode);
-        System.out.println(myRdd.reduce((x, y) -> x+y));
+       JavaRDD<Double> myRdd = context.parallelize(doubleCode);
+//        System.out.println(myRdd.reduce((x, y) -> x+y));
 
         JavaDoubleRDD sqrtRdd = myRdd.mapToDouble(e -> Math.sqrt(e));
         sqrtRdd.foreach((e) -> System.out.println(e));
         context.close();
-        
-
     }
 }
